@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { ContactProvider, Contact } from '../../providers/contact/contact';
+import { HomePage } from '../home/home';
  
 @IonicPage()
 @Component({
@@ -38,5 +39,9 @@ export class EditContactPage {
       return this.contactProvider.insert(this.model);
     }
   }
+   public bug(){
+
+    this.navCtrl.push(HomePage);
+   }
  
 }

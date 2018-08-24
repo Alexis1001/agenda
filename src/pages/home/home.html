@@ -1,7 +1,7 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Storage Example
+  <ion-navbar class="toolbar">
+    <ion-title class="agenda">
+      AGENDA
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -15,7 +15,7 @@
       </ion-card-header>
  
       <ion-card-content>
-        <p>{{ item.contact.phone }} - {{ item.contact.birth | date:'dd/MM/yyyy' }} </p>
+        <p>{{ item.contact.phone }} - {{ item.contact.birth | date:'dd/MM/yyyy' }} {{item.contact.direccion}}</p>
       </ion-card-content>
  
       <ion-row text-center>
@@ -28,7 +28,7 @@
         <ion-col>
           <button ion-button icon-left clear small (click)="removeContact(item);">
             <ion-icon name="trash"></ion-icon>
-            <div>Excluir</div>
+            <div>Eliminar</div>
           </button>
         </ion-col>
         <ion-col>

@@ -49,6 +49,7 @@ export class Contact {
   phone: number;
   birth: Date;
   active: boolean;
+  direcion:string;
 }
  
 export class ContactList {

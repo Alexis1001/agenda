@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, ToastController } from 'ionic-angular';
 import { ContactProvider, Contact, ContactList } from '../../providers/contact/contact';
- 
 @Component({
-  selector: 'page-home',
+selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
