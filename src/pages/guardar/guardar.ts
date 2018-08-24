@@ -2,16 +2,16 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { ContactProvider, Contact } from '../../providers/contact/contact';
 
- 
+
+
 @IonicPage()
 @Component({
-  selector: 'page-edit-contact',
-  templateUrl: 'edit-contact.html',
+  selector: 'page-guardar',
+  templateUrl: 'guardar.html',
 })
-export class EditContactPage {
+export class GuardarPage {
   model: Contact;
   key: string;
- 
   constructor(public navCtrl: NavController, public navParams: NavParams, private contactProvider: ContactProvider, private toast: ToastController) {
     if (this.navParams.data.contact && this.navParams.data.key) {
       this.model = this.navParams.data.contact;
@@ -20,7 +20,6 @@ export class EditContactPage {
       this.model = new Contact();
     }
   }
- 
   save() {
     this.saveContact()
       .then(() => {
@@ -39,4 +38,5 @@ export class EditContactPage {
       return this.contactProvider.insert(this.model);
     }
   }
+
 }
