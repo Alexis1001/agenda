@@ -24,11 +24,11 @@ export class EditContactPage {
   save() {
     this.saveContact()
       .then(() => {
-        this.toast.create({ message: 'Contato salvo.', duration: 3000, position: 'botton' }).present();
+        this.toast.create({ message: 'Contacto Guardado.', duration: 3000, position: 'botton' }).present();
         this.navCtrl.pop();
       })
       .catch(() => {
-        this.toast.create({ message: 'Erro ao salvar o contato.', duration: 3000, position: 'botton' }).present();
+        this.toast.create({ message: 'Error al guardar contacto', duration: 3000, position: 'botton' }).present();
       });
   }
  

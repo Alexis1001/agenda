@@ -1,17 +1,25 @@
 <ion-header>
   <ion-navbar class="toolbar">
-    <ion-title class="agenda">
-      AGENDA
+    <ion-title >
+      <h2 class="agenda">AGENDA</h2>
     </ion-title>
   </ion-navbar>
 </ion-header>
  
-<ion-content padding>
+<ion-content padding class="cuerpo">
   <ion-list>
     <ion-card *ngFor="let item of contacts" [ngClass]="{'item-inactive': !item.contact.active }">
  
+
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="assets/imgs/avatar.png">
+        </ion-avatar>
+       
+      </ion-item>
+
       <ion-card-header>
-        <h1>{{ item.contact.name }}</h1>
+        <h1>{{ item.contact.name }} {{ item.contact.apellidopaterno }} {{ item.contact.apellidomaterno}}</h1>
       </ion-card-header>
  
       <ion-card-content>
@@ -21,28 +29,34 @@
       <ion-row text-center>
         <ion-col>
           <button ion-button icon-left clear small (click)="editContact(item);">
-            <ion-icon name="create"></ion-icon>
-            <div>Editar</div>
+           <div>Editar</div>
           </button>
-        </ion-col>
+              <ion-icon name="create"></ion-icon>
+       </ion-col>
         <ion-col>
           <button ion-button icon-left clear small (click)="removeContact(item);">
             <ion-icon name="trash"></ion-icon>
             <div>Eliminar</div>
           </button>
         </ion-col>
-        <ion-col>
-        <!--  <a href="tel:{{ item.contact.phone }}" ion-button icon-left clear small>
+       <!-- <ion-col>
+          <a href="tel:{{ item.contact.phone }}" ion-button icon-left clear small>
             <ion-icon name="call"></ion-icon>
-            <div>Ligar</div>
-          </a>-->
-        </ion-col>
-      </ion-row>
+            <div> llamar</div>
+          </a>
+        </ion-col>-->
+        
+  - </ion-row>
  
     </ion-card>
   </ion-list>
- 
+
   <ion-fab right bottom>
     <button ion-fab color="primary" (click)="addContact()"><ion-icon name="add"></ion-icon></button>
   </ion-fab>
+
+
+    
+ 
+
 </ion-content>

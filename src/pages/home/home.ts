@@ -33,7 +33,7 @@ export class HomePage {
         // Removendo do array de items
         var index = this.contacts.indexOf(item);
         this.contacts.splice(index, 1);
-        this.toast.create({ message: 'Contato removido.', duration: 3000, position: 'botton' }).present();
+        this.toast.create({ message: 'Contacto Eliminado.', duration: 3000, position: 'botton' }).present();
       })
   }
  

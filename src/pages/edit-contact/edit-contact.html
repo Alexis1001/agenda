@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      CONTACTOS
+      <h2 class="agenda"> CONTACTOS  </h2>
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -11,17 +11,30 @@
   <ion-list>
  
     <ion-item>
-      <ion-label stacked><ion-icon name="contact"></ion-icon> Nombre</ion-label>
+      <ion-label stacked><ion-icon name="contact"></ion-icon> Nombre </ion-label>
       <ion-input type="text" name="name" [(ngModel)]="model.name"></ion-input>
     </ion-item>
+
+    
+    <ion-item>
+        <ion-label stacked><ion-icon name="contact"></ion-icon> Apellido Paterno</ion-label>
+        <ion-input type="text" name="apellidopaterno" [(ngModel)]="model.apellidopaterno"></ion-input>
+      </ion-item>
+
+      
+    <ion-item>
+        <ion-label stacked><ion-icon name="contact"></ion-icon> Apellido Materno</ion-label>
+        <ion-input type="text" name="apellidomaterno" [(ngModel)]="model.apellidomaterno"></ion-input>
+      </ion-item>
+    
  
     <ion-item>
-      <ion-label stacked><ion-icon name="call"></ion-icon> Telefono</ion-label>
+      <ion-label floating><ion-icon name="call"></ion-icon> Telefono</ion-label>
       <ion-input type="tel" name="phone" [(ngModel)]="model.phone"></ion-input>
     </ion-item>
  
     <ion-item>
-      <ion-label stacked><ion-icon name="contact"></ion-icon> Nacimento</ion-label>
+      <ion-label floating><ion-icon name="contact"></ion-icon> Nacimento</ion-label>
       <ion-datetime displayFormat="DD/MM/YYYY" name="birth" [(ngModel)]="model.birth"></ion-datetime>
     </ion-item>
 
@@ -33,10 +46,10 @@
     </ion-item>
 
  
-    <ion-item>
+   <!-- <ion-item>
       <ion-label>Activo</ion-label>
       <ion-checkbox name="active" [(ngModel)]="model.active"></ion-checkbox>
-    </ion-item>
+    </ion-item>-->
  
   </ion-list>
  
