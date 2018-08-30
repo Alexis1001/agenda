@@ -7,7 +7,7 @@
 </ion-header>
  
 <ion-content padding class="cuerpo">
-  <ion-list>
+ <!-- <ion-list>
     <ion-card *ngFor="let item of contacts" [ngClass]="{'item-inactive': !item.contact.active }">
  
 
@@ -39,24 +39,60 @@
             <div>Eliminar</div>
           </button>
         </ion-col>
-       <!-- <ion-col>
+       <ion-col>
           <a href="tel:{{ item.contact.phone }}" ion-button icon-left clear small>
             <ion-icon name="call"></ion-icon>
             <div> llamar</div>
           </a>
         </ion-col>-->
         
-  - </ion-row>
+ <!-- </ion-row>
  
     </ion-card>
-  </ion-list>
+  
+    
+
+
+
+</ion-list>-->
+
+  <!--<ion-fab right bottom>
+    <button ion-fab color="primary" (click)="addContact()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+-->
+
+<ion-list>
+
+
+   <ion-item *ngFor="let item of contacts" [ngClass]="{'item-inactive': !item.contact.active }">
+       <ion-thumbnail item-start >
+       <img src="assets/imgs/avatar.png">
+        </ion-thumbnail>
+       <h2 >{{ item.contact.name }} {{ item.contact.apellidopaterno }} {{ item.contact.apellidomaterno}}</h2>
+       <p>{{ item.contact.phone }}</p>
+    
+    <ion-col>
+      <button ion-button icon-right clear small (click)="editContact(item);">
+       <div>Editar</div>
+      </button>
+          <ion-icon name="create"></ion-icon>
+   </ion-col>
+
+    <ion-col>
+      <button ion-button icon-right clear small (click)="removeContact(item);">
+        <ion-icon name="trash"></ion-icon>
+        <div >Eliminar</div>
+      </button>
+    </ion-col>
+
+
+  
+       </ion-item>
+  
+      </ion-list>
 
   <ion-fab right bottom>
     <button ion-fab color="primary" (click)="addContact()"><ion-icon name="add"></ion-icon></button>
   </ion-fab>
-
-
-    
- 
 
 </ion-content>

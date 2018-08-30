@@ -10,6 +10,18 @@
  
   <ion-list>
  
+      <button ion-button  (click)="takePhoto()" class="camara" >
+          <ion-icon name="camera"></ion-icon> tomate una foto
+          </button>
+
+
+         <!-- <ion-card class="block">
+              <ion-icon  name="trash" class="deleteIcon"></ion-icon>
+              <img src="someimage.png" />
+          </ion-card>-->
+
+
+
     <ion-item>
       <ion-label stacked><ion-icon name="contact"></ion-icon> Nombre </ion-label>
       <ion-input type="text" name="name" [(ngModel)]="model.name"></ion-input>
@@ -55,4 +67,14 @@
  
   <button ion-button block (click)="save()">Guardar</button>
   
+
+  <!--<ion-col col-6 *ngFor="let photo of photos; let id = index">
+
+        <img [src]="photo" *ngIf="photo" />
+      </ion-card>
+</ion-col>-->
+
+
+
+
 </ion-content>
